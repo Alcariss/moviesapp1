@@ -7,6 +7,20 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div id="banner">
+	<%= image_tag("vse.gif", :size => "50x50") %>
+	<%= @page_title || "Movies we love" %>
+</div>
+
+<div id="nav">
+	<ul>
+		<li><%= link_to "Questions"%></li>
+		<li><%= link_to "Contact"%></li>
+		<li><%= link_to "Movies"%></li>
+		<li><%= link_to "Test"%></li>
+	</ul>
+</div>
+
 
 <%= yield %>
 
