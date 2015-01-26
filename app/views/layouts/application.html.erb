@@ -14,12 +14,27 @@
 
 <div id="nav">
 	<ul>
+		<li><%= link_to "Home", root_path %></li>
+		<% if !signed_in? %>
+			<li><%= link_to "Sign In", signin_path%></li>
+		<% else %>
+			<li>Signed as <%= @current_user.name %></li>
+			<li><%= link_to "Sign Out", signout_path %></li>
+		<% end %>
 		<li><%= link_to "Questions"%></li>
 		<li><%= link_to "Contact"%></li>
 		<li><%= link_to "Movies"%></li>
 		<li><%= link_to "Test"%></li>
+		
 	</ul>
 </div>
+
+<% flash.each do |key, value| %>
+	<br>
+	<div class="flash <%= key%>" style="background-color:red; font-size:20px">
+	<%= value %>
+	</div>
+<% end %>
 
 
 <%= yield %>
