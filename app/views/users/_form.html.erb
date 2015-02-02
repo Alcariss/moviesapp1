@@ -20,6 +20,10 @@
     <%= f.text_field :email %>
   </div>
   <div class="field">
+    <%= f.label :admin %><br />
+    <%= f.check_box :admin %>
+  </div>
+  <div class="field">
     <%= f.label :Date_of_birth %><br />
     <%= f.date_select :dob %>
   </div>
@@ -33,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :photo %><br />
-    <%= f.text_field :photo %>
+    <%= f.file_field :photo %>
   </div>
   <div class="field">
     <%= f.label :password %><br />

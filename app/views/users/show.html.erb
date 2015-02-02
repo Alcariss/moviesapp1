@@ -9,7 +9,10 @@
   <b>Email:</b>
   <%= @user.email %>
 </p>
-
+<p>
+  <b>Adfmin:</b>
+  <%= @user.admin %>
+</p>
 <p>
   <b>Dob:</b>
   <%= @user.dob %>
@@ -27,7 +30,7 @@
 
 <p>
   <b>Photo:</b>
-  <%= @user.photo %>
+  <%= image_tag(@user.photo) %>
 </p>
 
 <%= link_to 'Want to update?', edit_user_path(@user) %> 
